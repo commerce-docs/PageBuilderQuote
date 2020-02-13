@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
+    <type name="vendor_quote"
+            component="Magento_PageBuilder/js/content-type"
+            preview_component=""
+            label=""
+            icon=""
+            menu_section=""
+            sortOrder=""
+            form=""
+            translate="label">
+        <children default_policy="deny"/>
+        <appearances>
+            <appearance name="default"
+                    default="true"
+                    preview_template=""
+                    master_template=""
+                    reader="Magento_PageBuilder/js/master-format/read/configurable">
+                <elements>
+                    <element name="main">
+                        <style name="display" source="display" converter="Magento_PageBuilder/js/converter/style/display" preview_converter="Magento_PageBuilder/js/converter/style/preview/display"/>
+                        <attribute name="name" source="data-content-type"/>
+                        <attribute name="appearance" source="data-appearance"/>
+                    </element>
+                </elements>
+            </appearance>
+        </appearances>
+    </type>
+</config>
