@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
+    <type name="vendor_quote"
+            label="Quote"
+            menu_section="elements"
+            component="Magento_PageBuilder/js/content-type"
+            preview_component="Vendor_PageBuilderQuote/js/content-type/vendor-quote/preview"
+            form="pagebuilder_vendor_quote_form"
+            icon="icon-pagebuilder-quote"
+            sortOrder="21"
+            translate="label">
+        <children default_policy="deny"/>
+        <appearances>
+            <appearance name="default"
+                    default="true"
+                    preview_template="Vendor_PageBuilderQuote/content-type/vendor-quote/default/preview"
+                    master_template="Vendor_PageBuilderQuote/content-type/vendor-quote/default/master"
+                    reader="Magento_PageBuilder/js/master-format/read/configurable">
+                <elements>
+                    <element name="main">
+                        <style name="display" source="display" converter="Magento_PageBuilder/js/converter/style/display" preview_converter="Magento_PageBuilder/js/converter/style/preview/display"/>
+                        <attribute name="name" source="data-content-type"/>
+                        <attribute name="appearance" source="data-appearance"/>
+                    </element>
+                    <element name="quote">
+                        <attribute name="preview_length" source="preview_length"/>
+                        <html name="quote" preview_converter="Magento_PageBuilder/js/converter/html/directive"/>
+                    </element>
+                    <element name="author">
+                        <html name="author" converter="Magento_PageBuilder/js/converter/html/tag-escaper"/>
+                    </element>
+                </elements>
+            </appearance>
+            <appearance name="picture-quote"
+                    preview_template="Vendor_PageBuilderQuote/content-type/vendor-quote/picture-quote/preview"
+                    master_template="Vendor_PageBuilderQuote/content-type/vendor-quote/picture-quote/master"
+                    reader="Magento_PageBuilder/js/master-format/read/configurable">
+                <form>pagebuilder_vendor_quote_picture_form</form>
+                <elements>
+                    <element name="main">
+                        <style name="display" source="display" converter="Magento_PageBuilder/js/converter/style/display" preview_converter="Magento_PageBuilder/js/converter/style/preview/display"/>
+                        <attribute name="name" source="data-content-type"/>
+                        <attribute name="appearance" source="data-appearance"/>
+                    </element>
+                    <element name="quote_image">
+                        <attribute name="image" source="src" converter="Magento_PageBuilder/js/converter/attribute/src" preview_converter="Magento_PageBuilder/js/converter/attribute/preview/src"/>
+                        <attribute name="author" source="alt"/>
+                    </element>
+                     <element name="quote">
+                        <attribute name="preview_length" source="preview_length"/>
+                        <html name="quote" preview_converter="Magento_PageBuilder/js/converter/html/directive"/>
+                    </element>
+                    <element name="author">
+                        <html name="author" converter="Magento_PageBuilder/js/converter/html/tag-escaper"/>
+                    </element>
+                </elements>
+            </appearance>
+        </appearances>
+    </type>
+</config>

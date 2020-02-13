@@ -1,0 +1,52 @@
+.icon-pagebuilder-quote {
+    content: url('@{baseDir}Vendor_PageBuilderQuote/css/images/content-type/vendor-quote/appearance/icon-pagebuilder-quote.svg');
+    width: 18px;
+    height: 18px;
+    margin-bottom: -1px;
+}
+
+[data-content-type='vendor_quote'] {
+    .quote-wrapper {
+        overflow: auto;
+        quotes: '\201C' '\201D' '\2018' '\2019';
+
+        .quote {
+            display: block;
+            font-size: 1.3em;
+            margin: 18px 18px 10px 18px;
+            text-decoration: none;
+            word-break: normal !important;
+            line-height: 1.5;
+            padding: 0;
+            font-weight: 300;
+
+            &:after {
+                content: close-quote;
+                font-size: 0;
+                line-height: 0;
+                margin-left: 0;
+            }
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: 4px;
+            left: -5px;
+
+            &::before {
+                content: open-quote;
+                font-size: 3.4em;
+                font-weight: 300;
+            }
+        }
+
+        .quote-author {
+            padding: 4px 30px 4px 0;
+            font-size: 14px;
+            font-weight: 600;
+            color: #555555;
+            margin-left: 18px;
+            word-break: normal !important;
+        }
+    }
+}

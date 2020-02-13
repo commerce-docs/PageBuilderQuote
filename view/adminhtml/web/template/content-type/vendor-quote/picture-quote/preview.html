@@ -1,0 +1,12 @@
+<div attr="data.main.attributes" ko-style="data.main.style" class="pagebuilder-content-type pagebuilder-vendor-quote" css="data.main.css" event="{ mouseover: onMouseOver, mouseout: onMouseOut }, mouseoverBubble: false">
+    <render args="getOptions().template"/>
+    <div class="quote-image">
+        <img if="data.quote_image.attributes().src" attr="data.quote_image.attributes" ko-style="data.quote_image.style" css="data.quote_image.css" />
+        <div class="quote-image-placeholder" ifnot="data.quote_image.attributes().src"></div>
+    </div>
+    <div class="quote-wrapper">
+        <div class="quote-icon"></div>
+        <div class="quote" attr="data.quote.attributes" css="data.quote.css" data-bind="liveEdit: { field: 'quote', placeholder: $t('Edit Quote Text') }"></div>
+        <div class="quote-author" attr="data.author.attributes" ko-style="data.author.style" css="data.author.css" data-bind="liveEdit: { field: 'author', placeholder: $t('Edit Author Text') }"></div>
+    </div>
+</div>
