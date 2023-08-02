@@ -13,11 +13,11 @@
   },
   "ticketTracker": {
     "functionalJiraQueue": {
-        "projectKey": "COMDOX"
+        "projectKey": "COMDOX",
         "component": "Maintenance"
     },
     "securityJiraQueue": {
-        "projectKey": "MAGREQ"
+        "projectKey": "MAGREQ",
         "component": "Commerce M2"
     }
   },  
